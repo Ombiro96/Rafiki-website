@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right, hsla(55, 98%, 50%, 1.0), hsla(275, 86%, 36%, 0.6));
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+ul{
+    font-size: 2rem;
+    color: #fff;
+    list-style-type: none;/*removes bullets*/
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+li a{
+    display: block;
+    width: 60px;
+    padding: 10px, 25px;
+}
+li #logo{
+    float: left;
+}
+.menu-container:hover{
+    color: hsla(275, 86%, 36%, 0.9);
+}
+h1{
+    color: goldenrod;
+}
