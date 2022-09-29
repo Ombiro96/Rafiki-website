@@ -1,60 +1,58 @@
+:root{
+    --bright:hsla(55,98%,50%,1.0);
+    --brighter: white;
+    --dark:hsla(275, 86%, 36%, 0.7);
+    --darker:hsla(275, 86%, 36%, 1.0);
+}
+
 *{
     padding: 0;
     margin: 0;
-    /*background-image: linear-gradient(to right, hsla(55, 98%, 50%, 1.0), hsla(275, 86%, 36%, 0.6));*/
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 .menu-container{
+    display: flex;
+    justify-content: space-between;
     font-size: 2rem;
-    color: #fff;
+    color: var(--brighter);
     list-style-type: none;/*removes bullets*/
     margin: 0;
     padding: 0;
-
-    background-color: hsla(55, 98%, 50%, 1.0);
+    background-color: var(--bright);
 }
 ul{
     display: flex;
-    flex-direction: row;
     list-style-type: none;
 }
 li{
     margin: auto;
 }
 li a{
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
     float: right;
     display: block;
     width: fit-content;
     height: 30px;
     padding: 3px;
-    margin: none;
-    background-color: hsla(275, 86%, 36%, 0.6);
+    margin: 10px;
 }
-li #logo{
-    float: left;
-}
+
 li a:hover{
-    background-color: hsla(275, 86%, 36%, 0.3);
+    background-color: var(--dark);
+    transition: 0.4s;
 }
 #header-el{
     color: hsla(0, 0, 0, 0);
     text-align: center;
 }
 .hero{
-    height: 50vh;
-    width: 99vw;
+    height: 60vh;
+    width: 100vw;
     background-image: url("hero.png");
-    display: flex;
-}
-.hero button{
-    background-color: hsla(275, 86%, 36%, 1.0);
-    color: goldenrod;
-    align-items: center;
-    align-content: center;
-    height: 50px;
-    width: 100px;
-    margin: auto;
+    background-repeat: no-repeat;
 }
 .row {
     margin-top: 5%;
@@ -64,7 +62,6 @@ li a:hover{
 }
 .home-col {
     flex-basis: 30%;
-    background: hsla(55, 98%, 50%, 1.0);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
@@ -74,12 +71,24 @@ li a:hover{
 .motto{
     font-size: 30px;
 }
-.footer{
-    background-color: hsla(55, 98%, 50%, 1.0);
-    width:100%;
+footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bright);
+    width:95vw;
     text-align:center;
     padding: 30px;
     margin-bottom: 0px;
     margin-top: 20px;
     font-weight: 600;
+}
+.copyrights{
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: var(--bright);
 }
