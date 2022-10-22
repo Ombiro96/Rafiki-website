@@ -10,92 +10,75 @@
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+h1{
+    font-size: 2em;
+}
+h3{
+    font-size: 1.7em;
+}
+p{
+    font-size: 1.5em;
 }
 .menu-container{
-    display: flex;
-    justify-content: space-between;
-    font-size: 2rem;
+    display: grid;
+    display: inline;
+    grid-template-columns: 1em repeat(5, 1em);
+    /* justify-content: space-between; */
+    font-size: 1.5em;
     color: var(--brighter);
     list-style-type: none;/*removes bullets*/
-    margin: 0;
-    padding: 0;
-    background-color: var(--bright);
+    /* background-color: var(--bright); */
+}
+.logo{
+    background-color: aqua;
 }
 ul{
     display: flex;
+    /* background-color: violet; */
     list-style-type: none;
-}
-li{
-    margin: auto;
+    justify-content: flex-end;
 }
 li a{
+    /* background-color: blueviolet; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: flex-start; */
     text-decoration: none;
-    float: right;
-    display: block;
     width: fit-content;
-    height: 30px;
-    padding: 3px;
-    margin: 10px;
+    height: 1.7em;
+    padding: 1px;
+    margin: 0.5em;
 }
 
 li a:hover{
     background-color: var(--dark);
     transition: 0.4s;
 }
-#header-el{
-    color: hsla(0, 0, 0, 0);
-    text-align: center;
-}
 .hero{
-    margin-top: 10px;
     background-color: var(--bright);
     overflow: hidden;
     height: 60vh;
     background-repeat: no-repeat;
 }
+#header-el{
+    color: hsla(0, 0, 0, 0);
+    text-align: center;
+}
 .row {
-    margin-top: 5%;
+    margin: 1em 0;
     display: flex;
+    /* flex-direction: column; */
     justify-content: space-between;
     text-align: center;
 }
 .home-col {
-    flex-basis: 30%;
+    /* min-width: 100; */
     border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 1s;
-    background-color: var(--bright);
-}
-.home-col:hover{
-    background-color: var(--dark);
-}
-.motto{
-    font-size: 30px;
-}
-footer{
-    display: flex;
-    flex-direction: column;
-}
-.footer-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--bright);
-    width:95vw;
-    text-align:center;
-    padding: 30px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    font-weight: 600;
-}
-.copyrights{
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: var(--bright);
+    margin: 0 0.5em;
+    padding: 1em;
+    /* background-color: var(--bright); */
 }
 .taekwondo{
     background-color: var(--bright);
@@ -107,11 +90,23 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 100px;
+    margin-right: 2em;
 }
 .taek1 img{
-    height: 50vh;
-    width: 40vw;
+    height: 100%;
+    width: 80%;
+}
+button{
+    background-color: var(--dark);
+    color: var(--bright);
+    font-size: 1.5em;
+    height: 2.2em;
+    margin: 0.2em;
+    padding: 0.5em 1em 1em;
+    /* border: none; */
+}
+button:hover{
+    background-color: var(--darker);
 }
 .arts{
     background-color: var(--brighter);
@@ -123,23 +118,67 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: 100px;
+    margin-left: 2em;
 }
 .arts2 img{
-    height: 50vh;
-    width: 40vw;
+    height: 100%;
+    width: 90%;
 }
-p{
-    font-size: 1.5rem;
+
+footer{
+    display: flex;
+    flex-direction: column;
 }
-button{
-    background-color: var(--dark);
-    color: var(--bright);
-    font-size: 1.5rem;
-    height: 3rem;
-    margin: 10px;
-    padding: 10px;
+.footer-div{
+    font-size: 0.6em;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bright);
+    width:100%;
+    text-align:center;
+    padding: 1em;
+    font-weight: none;
 }
-button:hover{
-    background-color: var(--darker);
+.copyrights{
+    text-align: center;
+    font-size: 0.8em;
+    background-color: var(--bright);
+}
+@media screen and (max-width: 800px) {
+    .logo{
+        background-color: green;
+    }
+    .row {
+        margin: 1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .home-col {
+        min-width: 100%;
+        border-radius: 10px;
+        margin: 0.5em 0;
+        padding: 1em;
+        /* background-color: var(--brighter); */
+    }
+}
+@media screen and (max-width: 500px) {
+    .logo{
+        background-color:brown;
+    }
+    .row {
+        margin: 1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .home-col {
+        min-width: 100%;
+        border-radius: 10px;
+        margin: 0.5em 0;
+        padding: 1em;
+        /* background-color: var(--brighter); */
+    }
 }

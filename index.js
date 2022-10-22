@@ -28,7 +28,7 @@ function newColor(){
         colour.style.backgroundColor="blue"
     }
     else if(randomizer===3){
-        colour.style.backgroundColor="yellow"
+        colour.style.backgroundColor="var(--bright)"
     }
     else if(randomizer===4){
         colour.style.backgroundColor="purple"
